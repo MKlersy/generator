@@ -44,14 +44,7 @@ if (navigator.geolocation) {
             center: new google.maps.LatLng(myApp.lat, myApp.lng),
             radius: 8000,
         });
-
-        // var markerProposition = new google.maps.Marker({
-        //     draggable:true,
-        //     position:new google.maps.LatLng(myApp.lat + Math.random() * 0.2, myApp.lng + Math.random() * 0.2),
-        //     map,
-        //     label:"Nouvelle position"
-        // });
-findPin();
+        findPin();
     });
 }
 
@@ -74,6 +67,8 @@ for (var i = 0; i < 1; i++) {
             label:"Nouvelle position"
         });
         geocodePosition(point);
+    } else {
+        findPin();
     }
 }
 }
